@@ -297,7 +297,7 @@ describe('Address', function() {
     );
   });
 
-  it('should handle segwit non-zero padding in 8-to-5 conversion', () => {
+  it('should handle cashaddr non-zero padding in 8-to-5 conversion', () => {
     const addr = 'bitcoincash:pruptvpkmxamee0f72sq40gm70wfr624zpu8adj8t6';
     assert.throws(() => Address.fromString(addr, 'main'));
 
