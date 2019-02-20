@@ -636,7 +636,7 @@ describe('Node', function() {
     const json = await node.rpc.call({
       method: 'getblocktemplate',
       params: [
-        {rules: ['segwit']}
+        {rules: []}
       ],
       id: '1'
     }, {});
