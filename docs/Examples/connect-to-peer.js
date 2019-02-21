@@ -8,9 +8,6 @@ const network = bcoin.Network.get('testnet');
 const peer = bcoin.Peer.fromOptions({
   network: 'testnet',
   agent: 'my-subversion',
-  hasWitness: () => {
-    return false;
-  }
 });
 
 const addr = bcoin.net.NetAddress.fromHostname(process.argv[2], 'testnet');

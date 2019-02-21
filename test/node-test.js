@@ -776,10 +776,7 @@ describe('Node', function() {
     const tx1 = TX.fromRaw(rawTX1, 'hex');
     const dummyPeer = Peer.fromOptions({
       network: 'regtest',
-      agent: 'my-subversion',
-      hasWitness: () => {
-        return false;
-      }
+      agent: 'my-subversion'
     });
     const txItem = new InvItem(invTypes.TX, tx1.hash());
     await node.sendTX(tx1); // add TX to inventory
