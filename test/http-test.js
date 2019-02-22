@@ -258,6 +258,11 @@ describe('HTTP', function() {
     });
   });
 
+  it('should get version as int from getnetworkinfo', async () => {
+    const info = await nclient.execute('getnetworkinfo', []);
+    assert.typeOf(info.version, 'number');
+  });
+
   it('should cleanup', async () => {
     consensus.COINBASE_MATURITY = 100;
     await wallet.close();
