@@ -171,6 +171,7 @@ describe('HTTP', function() {
   it('should execute an rpc call', async () => {
     const info = await nclient.execute('getblockchaininfo', []);
     assert.strictEqual(info.blocks, 0);
+    assert.strictEqual(info.initialblockdownload, true);
   });
 
   it('should execute an rpc call with bool parameter', async () => {
